@@ -1,7 +1,8 @@
 # IP address of the Philips Hue Bridge
-bridge_ip = '10.100.85.119'
+bridge_ip = 'YOUR PHILIPS HUE BRIDGE IP ADDRESS HERE'
 # The names of the lights to be used as defined in the Philips Hue Bridge app
-light_names = ['Miv 1', 'Miv 2']
+# No limit on the amount of lights (except by the Bridge itself)
+light_names = ['YOUR LIGHT NAME 1', 'YOUR LIGHT NAME 2']
 
 
 # Whether to have lights periodically switch which max frequency is being shown
@@ -12,6 +13,10 @@ roll_lights = False
 # e.g. time before light 1 switches from showing the biggest frequency
 # to showing the 2nd biggest frequency
 lights_rolling_freq = 1
+
+# Ratio of sum of bins' energies needed over weighted moving average of the last max_wma_len
+# sums of bins' energies for lights to be max brightness
+volume_threshold_for_max_brightness = 1.6
 
 # Minimum energy sum required for any lights update
 energy_threshold_for_lights_update = 2000

@@ -137,7 +137,7 @@ def update_lights(lights, num_lights, lights_gradients, max_wma_len, prev_fft_su
 		if wma == 0:
 			bri = 1 # If the first update, use min brightness
 		else:
-			bri = min(254, 1 + (fft_sum/(wma * 1.6)) * 253) # bri is in range [1, 254]
+			bri = min(254, 1 + (fft_sum/(wma * cfg.volume_threshold_for_max_brightness)) * 253) # bri is in range [1, 254]
 		bri = int(bri)
 		# Set lights' brightnesses
 		if bri/prev_bri < 1 - cfg.min_brightness_change_threshold or bri/prev_bri > 1 + cfg.min_brightness_change_threshold \
